@@ -26,7 +26,7 @@ BLOCK_TYPES = {
 }
 
 
-def get_input_path():
+def get_input_path(path):
     dangerous_dir = [
         Path("/"),
         Path("/System"),
@@ -37,8 +37,7 @@ def get_input_path():
         Path(os.path.expanduser("~")),
     ]
 
-    c = input("Enter full path of the file or folder: ").strip()
-    file_path = Path(c)
+    file_path = Path(path)
 
     if not file_path.exists():
         print("The path '{}' does not exist.".format(file_path))
@@ -369,6 +368,9 @@ def main():
     parser = argparse.ArgumentParser(
         description="Wordex v1: OCR + layout-aware Jev classification + DOCX"
     )
+
+    parser.add_argument("path", help="Path to an image or folder of images")
+
     parser.add_argument(
         "--include-images",
         action="store_true",
@@ -382,7 +384,7 @@ def main():
 
     args = parser.parse_args()
 
-    input_path = get_input_path()
+    input_path = get_input_path(args.path)
 
     write_document(
         input_path,
