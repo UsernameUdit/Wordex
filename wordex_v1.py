@@ -37,19 +37,24 @@ def get_input_path():
         Path(os.path.expanduser("~")),
     ]
 
-    c = input("Enter full path of the folder: ").strip()
+    c = input("Enter full path of the file or folder: ").strip()
     file_path = Path(c)
 
     if not file_path.exists():
         print("The path '{}' does not exist.".format(file_path))
         raise SystemExit(1)
 
-    if not file_path.is_dir():
-        print("The path '{}' is not a folder.".format(file_path))
-        raise SystemExit(1)
-
     if file_path in dangerous_dir:
         print("Warning: system directory. Exiting.......")
+        raise SystemExit(1)
+
+    if file_path.is_file():
+        if file_path.suffix.lower() not in IMAGE_EXTENSIONS:
+            print("The file is not a supported image.")
+            raise SystemExit(1)
+
+    elif not file_path.is_dir():
+        print("Path is neither an image nor a directory.")
         raise SystemExit(1)
 
     return file_path
@@ -293,18 +298,18 @@ def write_document(path, api_key, model, include_images):
 
     debug = []
 
-    for image_path in path.rglob("*"):
+    if path.is_file():
+        image_paths = [path]
+    else:
+        image_paths = path.rglob("*")
+
+    for image_path in image_paths:
         if image_path.suffix.lower() not in IMAGE_EXTENSIONS:
             continue
 
         try:
             print("OCR: {}".format(image_path.name))
-
             ocr_result = ocr_image(image_path)
-
-            if not ocr_result["blocks"]:
-                print("  No OCR text found.")
-                continue
 
             print(
                 "  Found {} OCR blocks. Asking Jev...".format(
