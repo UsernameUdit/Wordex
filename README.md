@@ -47,24 +47,16 @@ Here is Wordex output to it.
 
 ### Input
 <img width="795" height="416" alt="5" src="https://github.com/user-attachments/assets/363c8b69-78e5-4357-94a0-8678bd151732" />
-
+<br>
 <img width="892" height="560" alt="4" src="https://github.com/user-attachments/assets/fbdf4140-da55-4045-8c0a-71c2b110ac47" />
-
-<img width="840" height="532" alt="2" src="https://github.com/user-attachments/assets/38c336f9-a226-474f-acb1-d8f5298034a6" />
-
-<img width="808" height="332" alt="1" src="https://github.com/user-attachments/assets/a897567e-6fe2-4b95-856d-acc9c4db5077" />
-
-<img width="739" height="566" alt="6" src="https://github.com/user-attachments/assets/75b9700d-a61c-4e25-8bea-e9b6398f5516" />
-
+<br>
 ### Output
 <img width="644" height="609" alt="wor4" src="https://github.com/user-attachments/assets/266ee161-c3cd-4c11-9177-8298bb03f200" />
-
-
+<br>
 <img width="761" height="509" alt="wor3" src="https://github.com/user-attachments/assets/0a111e58-13c5-4415-b459-2013d2894606" />
-
-
+<br>
 <img width="665" height="660" alt="wor2" src="https://github.com/user-attachments/assets/19fb0f5a-8c3c-442b-bfac-4a08f9e56f77" />
-
+<br>
 
 
 There do are many mistakes, many missing character it is because of the OCR
