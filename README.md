@@ -37,6 +37,9 @@ Jev isn't doing anything grand here. I'm mainly
 experimenting with what happens when a decision model is placed
 between OCR and document generation. I'll explain it below.
 
+## Working
+
+
 
 ## Demo
 
@@ -46,18 +49,16 @@ sections from the book I'm studying.
 Here is Wordex output to it.
 
 ### Input
-<img width="795" height="416" alt="5" src="https://github.com/user-attachments/assets/363c8b69-78e5-4357-94a0-8678bd151732" />
+<img width="48%" alt="5" src="https://github.com/user-attachments/assets/363c8b69-78e5-4357-94a0-8678bd151732" /> <img width="48%" alt="4" src="https://github.com/user-attachments/assets/fbdf4140-da55-4045-8c0a-71c2b110ac47" />
 <br>
-<img width="892" height="560" alt="4" src="https://github.com/user-attachments/assets/fbdf4140-da55-4045-8c0a-71c2b110ac47" />
-<br>
-### Output
-<img width="644" height="609" alt="wor4" src="https://github.com/user-attachments/assets/266ee161-c3cd-4c11-9177-8298bb03f200" />
-<br>
-<img width="761" height="509" alt="wor3" src="https://github.com/user-attachments/assets/0a111e58-13c5-4415-b459-2013d2894606" />
-<br>
-<img width="665" height="660" alt="wor2" src="https://github.com/user-attachments/assets/19fb0f5a-8c3c-442b-bfac-4a08f9e56f77" />
-<br>
-
+## Output
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/266ee161-c3cd-4c11-9177-8298bb03f200" alt="wor4" width="80%" />
+  <br><br>
+  <img src="https://github.com/user-attachments/assets/0a111e58-13c5-4415-b459-2013d2894606" alt="wor3" width="80%" />
+  <br><br>
+  <img src="https://github.com/user-attachments/assets/19fb0f5a-8c3c-442b-bfac-4a08f9e56f77" alt="wor2" width="80%" />
+</div>
 
 There do are many mistakes, many missing character it is because of the OCR
 but the thing is it works. we can change the OCR model in the future
