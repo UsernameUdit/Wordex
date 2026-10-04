@@ -42,7 +42,7 @@ between OCR and document generation. I'll explain it below.
 The working is pretty simple. You pass a filepath to an image or a folder to **wordex** as:
 
 ```bash
-python wordex C:/User/admin/Desktop/notes
+python wordex_v1.py C:/User/admin/Desktop/notes
 ```
 
 Python calls **Tesseract OCR** and parses its TSV output to create blocks that can be passed to **Jev** to decide the semantics (is it a paragraph/heading/metadata etc.). Then, Python executes as per Jev confidence on a block of image.
