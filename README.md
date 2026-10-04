@@ -37,8 +37,29 @@ Jev isn't doing anything grand here. I'm mainly
 experimenting with what happens when a decision model is placed
 between OCR and document generation. I'll explain it below.
 
-## Working
+## Working and Usage
 
+The working is pretty simple. You pass a filepath to an image or a folder to **wordex** as:
+
+```bash
+python wordex C:/User/admin/Desktop/notes
+```
+
+Python calls **Tesseract OCR** and parses its TSV output to create blocks that can be passed to **Jev** to decide the semantics (is it a paragraph/heading/metadata etc.). Then, Python executes as per Jev confidence on a block of image.
+
+## Usage
+
+### Requirements
+* Python
+* Tesseract OCR
+* The Python packages listed in `requirements.txt`
+* A TypeSafe API key
+
+Install the Python dependencies:
+
+```bash
+pip install -r requirements.txt
+```
 
 
 ## Demo
